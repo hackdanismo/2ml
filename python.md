@@ -104,6 +104,18 @@ else:
     # Or, do this if all conditions are false
 ```
 
+An example would look like this:
+
+```python
+age = 18
+
+# Conditional to check if age is equal or greater than the value
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are not yet an adult.")
+```
+
 ## Classes
 Create a class using the `class` keyword. The name of the class should use `PascalCase` e.g. `MyClass`.
 
