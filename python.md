@@ -6,6 +6,7 @@
 + [Variables](#variables)
 + [Functions](#functions)
 + [Array](#array)
++ [Conditional](#conditional)
 + [Classes](#classes)
 
 ## Check Python Version
@@ -89,6 +90,18 @@ print(ford)
 # Use the len method to get the total length of the array (number of items)
 arrayLength = len(cars)
 print(arrayLength)
+```
+
+## Conditional
+The basic conditional syntax in Python will look like this:
+
+```python
+if condition:
+    # Do this condition if true
+elif another_condition:
+    # Or, do this condition if the first condition is false but this one is true
+else:
+    # Or, do this if all conditions are false
 ```
 
 ## Classes
