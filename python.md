@@ -5,6 +5,7 @@
 + [Comments](#comments)
 + [Variables](#variables)
 + [Functions](#functions)
+    + [Return](#return)
 + [Array](#array)
 + [Conditional](#conditional)
 + [Classes](#classes)
@@ -69,7 +70,6 @@ my_function("Dan")
 
 Multiple parameters:
 
-
 ```python
 def my_function(firstName, lastName):
     print(firstName + " " + lastName)
@@ -86,6 +86,19 @@ def my_function(firstName="Dan"):
 
 # Call the function, this will use the default parameter value
 my_function()
+```
+
+### Return
+Return values are what a function sends back after it's done executing. It allows a function to produce a result that can be used later. 
+
+```python
+def add(x, y):
+    return x + y
+
+# Call the function
+result = add(10, 15)
+# Output the value
+print(result)
 ```
 
 ## Array
