@@ -5,6 +5,7 @@
 + [Executing Python Code](#executing-python-code)
 + [Comments](#comments)
 + [Variables](#variables)
++ [String](#string)
 + [Functions](#functions)
     + [Return](#return)
 + [Array](#array)
@@ -74,6 +75,15 @@ x = 5
 y = "Dan"
 
 print(x)
+```
+
+## String
+We can use an `f string` to allow values to be placed inside of a string.
+
+```python
+name = "Dan"
+
+print(f"Hello {name}")
 ```
 
 ## Functions
