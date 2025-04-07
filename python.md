@@ -78,6 +78,16 @@ def my_function(firstName, lastName):
 my_function("Dan", "Jackson")
 ```
 
+Default parameter values:
+
+```python
+def my_function(firstName="Dan"):
+    print("Hello " + firstName)
+
+# Call the function, this will use the default parameter value
+my_function()
+```
+
 ## Array
 An array can be created like so:
 
