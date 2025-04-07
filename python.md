@@ -101,6 +101,18 @@ result = add(10, 15)
 print(result)
 ```
 
+Common uses include returning booleans, for checks, and returning complex objects.
+
+```python
+def is_even(n):
+    return n % 2 == 0
+```
+
+```python
+def build_user(name, age):
+    return {"name": name, "age": age}
+```
+
 ## Array
 An array can be created like so:
 
