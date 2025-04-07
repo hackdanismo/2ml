@@ -9,6 +9,7 @@
 + [Array](#array)
 + [Conditional](#conditional)
 + [Classes](#classes)
++ [Import](#import)
 
 ## Check Python Version
 To check the version of `Python` installed, open the terminal:
@@ -245,4 +246,51 @@ other_dog = Dog()
 print(my_dog.bark())
 print(new_dog.bark())
 print(other_dog.bark())
+```
+
+## Import
+We can import code from there sources:
+
++ Built-in modules like: `math`, `os` and `random`.
++ Standard Library (this comes with Python)
++ Third-party packages/libraries usually installed using `pip`.
+
+```shell
+$ pip install package
+```
+
+```python
+import package
+```
+
+An `import` statement allows us to reuse code from other files or libraries. There are built-in modules, third-party libraries, or our own custom code. The following example is a basic import used to import the entire `math` module:
+
+```python
+import math
+
+print(math.sqrt(16))        # Use module_name.function() to access
+```
+
+To import everything (not recommended as can cause namespace conflicts and pulls eveything into the namespace itself):
+
+```python
+from math import *
+
+print(sin(pi / 2))
+```
+
+We can import specific functions:
+
+```python
+from math import sqrt, pi
+
+print(sqrt(16))
+```
+
+An alias can be used:
+
+```python
+import numpy as np
+
+print(np.array([1, 2, 3]))
 ```
