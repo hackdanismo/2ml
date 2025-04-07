@@ -1,6 +1,7 @@
 # Python
 
 + [Check Python Version](#check-python-version)
++ [Virtual Environments](#virtual-environments)
 + [Executing Python Code](#executing-python-code)
 + [Comments](#comments)
 + [Variables](#variables)
@@ -22,6 +23,33 @@ The `PIP` (package installer for `Python`) version can also be checked:
 
 ```shell
 $ pip3 --version
+```
+
+## Virtual Environments
+Virtual Environments are used to manage the dependencies for a project in development and production. This allows us to use different versions of Python for different projects. Virtual environments are independent groups of Python libraries, one for each project. Packages installed for one project will not impact another project. In Python versions 3.3 and 3.4, `pyenv` was used to create virtual environments. Since Python version 3.6, this has now been replaced by `venv`. The documentation for `venv` can be found [here](https://docs.python.org/3/library/venv.html#module-venv).
+
+Python comes bundled with the `venv` module to create virtual environments.
+
+```shell
+# How to setup on macOS:
+$ mkdir myproject
+$ cd myproject
+$ python3 -m venv .venv
+
+# How to setup on Windows:
+> mkdir myproject
+> cd myproject
+> py -3 -m venv .venv
+```
+
+Before working on a project, activate the environment. Your shell prompt will change to show the name of the activated environment:
+
+```shell
+# macOS
+$ . .venv/bin/activate
+
+# Windows
+> .venv\Scripts\activate
 ```
 
 ## Executing Python Code
