@@ -8,7 +8,6 @@
 + [String](#string)
 + [Functions](#functions)
     + [Return](#return)
-+ [Array](#array)
 + [Conditional](#conditional)
 + [Classes](#classes)
 + [Import](#import)
@@ -150,20 +149,6 @@ def is_even(n):
 ```python
 def build_user(name, age):
     return {"name": name, "age": age}
-```
-
-## Array
-An array can be created like so:
-
-```python
-cars = ["Ford", "BMW", "Audi"]
-
-ford = cars[0]
-print(ford)
-
-# Use the len method to get the total length of the array (number of items)
-arrayLength = len(cars)
-print(arrayLength)
 ```
 
 ## Conditional
