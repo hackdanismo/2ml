@@ -9,6 +9,8 @@
 + [Functions](#functions)
     + [Return](#return)
 + [Conditional](#conditional)
++ [List](#list)
++ [Dictionary](#dictionary)
 + [Classes](#classes)
 + [Import](#import)
 
@@ -173,6 +175,53 @@ if age >= 18:
     print("You are an adult.")
 else:
     print("You are not yet an adult.")
+```
+
+## List
+A list is an ordered collection of items. Any type of item can be stored in a list. Lists are defined using square brackets. The first item always starts at the index of `0`.
+
+```python
+fruits = ["Apple", "Banana", "Pear"]
+print(fruits[0])
+```
+
+Common operators:
+
+```python
+# Add an item to the list
+fruits.append("Orange")
+
+# Remove an item from the list
+fruits.remove("Orange")
+
+# Change/Edit an item
+fruits[1] = "Blueberry"
+
+# Loop through a list
+for fruit in fruits:
+    print(fruit)
+```
+
+## Dictionary
+A Dictionary is an unordered collection, similar to an object, of items in key-value pairs. Each value is accessed using its key. A Dictionary is defined using curly braces.
+
+```python
+person = {"name": "Dan", "age": 30, "city": "London"}
+print(person["name"])
+```
+
+Common operators:
+
+```python
+# Add or change a key-value pair
+person["job"] = "Engineer"
+
+# Remove a key-value pair
+del person["age"]
+
+# Loop through the dictionary
+for key, value in person.items():
+    print(f"{key}: {value}")
 ```
 
 ## Classes
