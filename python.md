@@ -9,6 +9,8 @@
 + [Functions](#functions)
     + [Return](#return)
 + [Conditional](#conditional)
++ [Loops](#loops)
+    + [For Loop](#for-loop)
 + [List](#list)
 + [Dictionary](#dictionary)
 + [Classes](#classes)
@@ -175,6 +177,48 @@ if age >= 18:
     print("You are an adult.")
 else:
     print("You are not yet an adult.")
+```
+
+## Loops
+
+### For Loop
+A for loop is used to iterate over a sequence. The basic syntax of a loop:
+
+```python
+for item in items:
+    # Do something with item
+```
+
+As an example:
+
+```python
+fruits = ["Apple", "Banana", "Pear"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+We can use the built-in `range()` function to loop over a range of numbers. A `range(5)` would loop over numbers from `0` to `4` (not including `5`). This is used to generate a sequence of numbers.
+
+```python
+for i in range(5):
+    print(i)
+```
+
+A loop can be used on a string:
+
+```python
+for letter in "hello":
+    print(letter)
+```
+
+Using `enumerate()` if we neeed the index and value:
+
+```python
+colors = ["Red", "Green", "Blue"]:
+
+for index, color in enumerate(colors):
+    print(index, color)
 ```
 
 ## List
