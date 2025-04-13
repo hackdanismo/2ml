@@ -16,6 +16,8 @@
 + [Dictionary](#dictionary)
 + [Classes](#classes)
 + [Import](#import)
++ [Projects](#projects)
+    + [Get Data from an API](#get-data-from-an-api)
 
 ## Check Python Version
 To check the version of `Python` installed, open the terminal:
@@ -428,4 +430,35 @@ An alias can be used:
 import numpy as np
 
 print(np.array([1, 2, 3]))
+```
+
+## Projects
+
+### Get Data from an API
+The following Python script can be used to return `JSON` data from an `API`. This uses the `requests` package that will need to be installed.
+
+```shell
+$ pip install requests
+```
+
+The Python code is as follows:
+
+```python
+# Import the package/module needed. This is importing the requests package
+import requests
+
+# Define the API endpoint
+url = "https://jsonplaceholder.typicode.com/posts"
+
+# Make a GET request
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the JSON data
+    data = response.json()
+    # Print the first three items
+    print(data[:3])
+else:
+    print(f"Failed to retrieve data: {response.status_code}")
 ```
