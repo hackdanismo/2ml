@@ -11,6 +11,7 @@
 + [Conditional](#conditional)
 + [Loops](#loops)
     + [For Loop](#for-loop)
+    + [While Loop](#while-loop)
 + [List](#list)
 + [Dictionary](#dictionary)
 + [Classes](#classes)
@@ -219,6 +220,24 @@ colors = ["Red", "Green", "Blue"]:
 
 for index, color in enumerate(colors):
     print(index, color)
+```
+
+### While Loop
+A while loop is used to repeat a block of code as long as a certain condition is true.
+
+```python
+while condition:
+    # Code to run
+```
+
+An example that starts printing the count at `1`, adds 1 to the count and repeats the count until it no longer is less or equal to `5`:
+
+```python
+count = 1
+
+while count <= 5:
+    print("Count is: ", count)
+    count += 1
 ```
 
 ## List
