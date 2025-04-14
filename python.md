@@ -5,6 +5,7 @@
 + [Executing Python Code](#executing-python-code)
 + [Comments](#comments)
 + [Variables](#variables)
++ [Data Types](#data-types)
 + [String](#string)
 + [Functions](#functions)
     + [Return](#return)
@@ -85,6 +86,15 @@ y = "Dan"
 print(x)
 ```
 
+## Data Types
+Here are a list of `data types` in Python:
+
++ `String` - "Hello"
++ `Integer` (whole numbers) - 12345
++ `Large Integer` - 342,654,896
++ `Float` - (numbers with decimal places - floating point number) - 1.2 
++ `Boolean` - True/False
+
 ## String
 We can use an `f string` to allow values to be placed inside of a string.
 
@@ -94,10 +104,35 @@ name = "Dan"
 print(f"Hello {name}")
 ```
 
+To return the first letter of a string, in this example the value returned would be `"H"`:
+
+```python
+print("Hello"[0])
+```
+
 The `len()` function can be used to return the number of characters in a string:
 
 ```python
 print(len("Hello"))
+```
+
+Convert a number to a string using the `str()` function and convert it to a float using the `float()` function:
+
+```python
+x = str(12345)
+print(x)
+
+y = float(12345)
+print(y)
+```
+
+We cannot concatenate (join) strings and integers together initially. To check the `type`:
+
+```python
+x = str(12345)
+
+# This will return <class 'str'> as the number is a string
+print(type(x))
 ```
 
 ## Functions
