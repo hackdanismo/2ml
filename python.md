@@ -16,6 +16,7 @@
 + [Dictionary](#dictionary)
 + [Classes](#classes)
 + [Import](#import)
+    + [Requirements](#requirements)
 + [Try/Catch](#try-catch)
 + [Projects](#projects)
     + [Get Data from an API](#get-data-from-an-api)
@@ -431,6 +432,22 @@ An alias can be used:
 import numpy as np
 
 print(np.array([1, 2, 3]))
+```
+
+### Requirements
+If we have a `requirements.txt` file in our project folder, we can install the packages/modules/libraries needed using `pip`. The `requirements.txt` file may look like this:
+
+```
+flask==2.3.3
+requests>=2.25.0
+pandas
+numpy<2.0
+```
+
+To install, we run:
+
+```shell
+$ pip3 install -r requirements.txt
 ```
 
 ## Try Catch
