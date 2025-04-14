@@ -14,6 +14,7 @@
     + [For Loop](#for-loop)
     + [While Loop](#while-loop)
 + [List](#list)
++ [Tuple](#tuple)
 + [Dictionary](#dictionary)
 + [Classes](#classes)
 + [Import](#import)
@@ -314,6 +315,31 @@ fruits[1] = "Blueberry"
 # Loop through a list
 for fruit in fruits:
     print(fruit)
+```
+
+## Tuple
+A tuple is similar to a list, but it is immutable, meaning it cannot be modified or changed (no adding/removing or changing of items). It is ordered and items inside a tuple can be accessed using an index. Duplicates are allowed, so a tuple can contain repeated values.
+
+A tuple is generally quicker than a list and uses less memory. This is useful for constant data that will not change. 
+
+```python
+my_tuple(1, "Hello", 3.14)
+
+# This will print "Hello"
+print(my_tuple[1])
+```
+
+We can use a tuple to return multiple items from a function.
+
+```python
+def get_user():
+    return("Dan", 30)
+
+# This is a tuple
+name, age = get_user()
+
+print(name)
+print(age)
 ```
 
 ## Dictionary
