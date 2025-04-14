@@ -16,6 +16,7 @@
 + [Dictionary](#dictionary)
 + [Classes](#classes)
 + [Import](#import)
++ [Try/Catch](#try-catch)
 + [Projects](#projects)
     + [Get Data from an API](#get-data-from-an-api)
 
@@ -430,6 +431,16 @@ An alias can be used:
 import numpy as np
 
 print(np.array([1, 2, 3]))
+```
+
+## Try Catch
+In Python, `try/catch` blocks are used to handle exceptions (errors) gracefully. This is so a program doesn't crash when something goes wrong.
+
+```python
+try:
+    # Code that might raise an error/exception
+except SomeException as e:
+    # Code that runs when an error/exception occurs
 ```
 
 ## Projects
