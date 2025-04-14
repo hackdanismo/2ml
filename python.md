@@ -86,6 +86,12 @@ y = "Dan"
 print(x)
 ```
 
+It's recommended to separate words for variables and functions with underscores.
+
+```python
+first_name = "Dan"
+```
+
 ## Data Types
 Here are a list of `data types` in Python:
 
