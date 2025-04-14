@@ -94,6 +94,12 @@ name = "Dan"
 print(f"Hello {name}")
 ```
 
+The `len()` function can be used to return the number of characters in a string:
+
+```python
+print(len("Hello"))
+```
+
 ## Functions
 Functions are declared using the `def` keyword.
 
