@@ -17,6 +17,7 @@
 + [Tuple](#tuple)
 + [Dictionary](#dictionary)
 + [Classes](#classes)
++ [Read & Write](#read-and-write)
 + [Import](#import)
     + [Requirements](#requirements)
 + [Try/Catch](#try-catch)
@@ -362,6 +363,35 @@ del person["age"]
 # Loop through the dictionary
 for key, value in person.items():
     print(f"{key}: {value}")
+```
+
+## Read and Write
+To write to a file in Python:
+
+```python
+# This will create a new file or overwrite and existing one
+with open("example.txt", "w") as file:
+    file.write("Hello, World\n")
+    file.write("This is a new line.\n")
+
+# This will append to the file, will not overwrite
+with open("example.txt", "a") as file:
+    file.write("Adding more content to the end of the file.\n")
+```
+
+To read a file:
+
+```python
+# Read the entire file as a string
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+# Read the file line by line
+with open("example.txt", "r") as file:
+    for line in file:
+        # strip() removes the new line characters from the file content
+        print(line.strip())
 ```
 
 ## Classes
