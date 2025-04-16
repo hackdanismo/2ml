@@ -9,6 +9,7 @@
 + [String](#string)
 + [Functions](#functions)
     + [Return](#return)
+    + [Args](#args)
 + [Conditional](#conditional)
 + [Loops](#loops)
     + [For Loop](#for-loop)
@@ -208,6 +209,46 @@ def is_even(n):
 def build_user(name, age):
     return {"name": name, "age": age}
 ```
+
+### Args
+In Python, `*args` is used to allow a function to accept a number of arguments when we don't know beforehand how many arguments will be passed into the function. All arguments that are passed into `*args` are returned as a tuple. This doesn't have to be named `*args`, it can be named whatever we prefer, but `*args` is usually the standard naming convention.
+
+```python
+def my_function(*args):
+    # Code within the function
+```
+
+An example:
+
+```python
+def greet_all(*args):
+    for name in args:
+        print(f"Hello, {name}")
+
+# Call the function and pass multiple arguments
+greet_all("Dan", "Pearl", "Sammy")
+```
+
+It is often used alongside `**kwargs`, which captures keyword arguments as a dictionary.
+
+```python
+def show_info(*args, **kwargs):
+    print("Positional arguments (args):")
+    for arg in args:
+        print(f"- {arg}")
+
+    print("\nKeyword arguments (kwargs):")
+    for key, value in kwargs.items():
+        print(f"- {key}: {value}")
+
+# Call the function and pass multiple arguments
+show_info("apple", "banana", color="red", size="large")
+```
+
++ `"apple"` and `"banana"` are collected into `args` as a `tuple`.
++ `color="red"` and `size="large"` are collected into `kwargs` as a `dictionary`.
+
+This pattern is super useful when you want your functions to be flexible and handle all kinds of input.
 
 ## Conditional
 The basic conditional syntax in Python will look like this:
