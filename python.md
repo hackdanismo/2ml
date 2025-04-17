@@ -648,6 +648,12 @@ pandas
 numpy<2.0
 ```
 
+To create the `requirements.txt` file:
+
+```python
+$ pip3 freeze > requirements.txt
+```
+
 To install, we run:
 
 ```shell
