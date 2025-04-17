@@ -24,6 +24,7 @@
 + [Import](#import)
     + [Requirements](#requirements)
 + [Try/Catch](#try-catch)
++ [Flask](#flask)
 + [Projects](#projects)
     + [Get Data from an API](#get-data-from-an-api)
 
@@ -57,6 +58,8 @@ $ python3 -m venv .venv
 > py -3 -m venv .venv
 ```
 
+This will create a `.venv` folder inside of your project. Any Python files (`.py`) should be outside this `.venv` folder.
+
 Before working on a project, activate the environment. Your shell prompt will change to show the name of the activated environment:
 
 ```shell
@@ -65,6 +68,18 @@ $ . .venv/bin/activate
 
 # Windows
 > .venv\Scripts\activate
+```
+
+We can now install packages using `pip`. When a package is installed, it is added to the `.venv/lib` folder inside the project. In the following example, `Flask` will be installed.
+
+```shell
+$ pip3 install Flask
+```
+
+The version can then be checked.
+
+```shell
+$ flask --version
 ```
 
 ## Executing Python Code
@@ -636,6 +651,30 @@ try:
 except SomeException as e:
     # Code that runs when an error/exception occurs
 ```
+
+## Flask
+We are using `Flask` to create a simple route. This is in a file named `app.py`.
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, Flask!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+To run:
+
+```python
+$ python3 app.py
+```
+
+This will run a development server at `http://127.0.0.1:5000` which can be opened in a browser window/tab.
 
 ## Projects
 
