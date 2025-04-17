@@ -27,6 +27,7 @@
 + [Flask](#flask)
 + [Projects](#projects)
     + [Get Data from an API](#get-data-from-an-api)
+    + [Microservice](#microservice)
 
 ## Check Python Version
 To check the version of `Python` installed, open the terminal:
@@ -724,3 +725,60 @@ if response.status_code == 200:
 else:
     print(f"Failed to retrieve data: {response.status_code}")
 ```
+
+### Microservice
+Here is an example Todo Microservice using Flask:
+
+```python
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# In-memory "database"
+todos = {}
+
+@app.route('/todos', methods=['GET'])
+def get_todos():
+    return jsonify(todos)
+
+@app.route('/todos/<int:todo_id>', methods=['GET'])
+def get_todo(todo_id):
+    todo = todos.get(todo_id)
+    if todo is None:
+        return jsonify({"error": "Todo not found"}), 404
+    return jsonify({todo_id: todo})
+
+@app.route('/todos', methods=['POST'])
+def add_todo():
+    data = request.get_json()
+    if not data or 'task' not in data:
+        return jsonify({"error": "Task content required"}), 400
+
+    new_id = max(todos.keys(), default=0) + 1
+    todos[new_id] = data['task']
+    return jsonify({"id": new_id, "task": data['task']}), 201
+
+@app.route('/todos/<int:todo_id>', methods=['DELETE'])
+def delete_todo(todo_id):
+    if todo_id in todos:
+        deleted = todos.pop(todo_id)
+        return jsonify({"deleted": {todo_id: deleted}})
+    return jsonify({"error": "Todo not found"}), 404
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+Run this code:
+
+```shell
+$ python3 microservice.py
+```
+
+This can be tested using `Postman` or `cURL`. To list all todos:
+
+```shell
+$ curl http://127.0.0.1:5000/todos
+```
+
+This is intentionally minimal, only everything in memory, no database to store data. In production, you’d use something like `PostgreSQL` or `Redis` and deploy with `Docker`.
