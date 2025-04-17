@@ -9,6 +9,7 @@
 + [String](#string)
 + [Functions](#functions)
     + [Return](#return)
+    + [Lambda](#lambda)
     + [Args](#args)
 + [Conditional](#conditional)
 + [Loops](#loops)
@@ -209,6 +210,26 @@ def is_even(n):
 def build_user(name, age):
     return {"name": name, "age": age}
 ```
+
+### Lambda
+A `lambda` function in Python is an anonymous (unnamed) function defined with a lambda keyword. It is typically used for short, throwaway functions. Often we don't need to then use a return statement. The syntax:
+
+```python
+lambda arguments: expression
+```
+
+An example:
+
+```python
+add = lambda x, y: x + y
+print(add(3, 5))
+
+# This is the same as:
+def add(x, y):
+    return x + y
+```
+
+We don't use lambda functions if the function has more than one expression and if readability is more important than being concise.
 
 ### Args
 In Python, `*args` is used to allow a function to accept a number of arguments when we don't know beforehand how many arguments will be passed into the function. All arguments that are passed into `*args` are returned as a tuple. This doesn't have to be named `*args`, it can be named whatever we prefer, but `*args` is usually the standard naming convention.
