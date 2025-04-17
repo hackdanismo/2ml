@@ -12,6 +12,7 @@
     + [Lambda](#lambda)
     + [Args](#args)
 + [Conditional](#conditional)
+    + [Ternary](#ternary)
 + [Loops](#loops)
     + [For Loop](#for-loop)
     + [While Loop](#while-loop)
@@ -293,6 +294,17 @@ if age >= 18:
     print("You are an adult.")
 else:
     print("You are not yet an adult.")
+```
+
+### Ternary
+A `ternary` (inline) conditional can be used in-place of a traditional `if/else` statement.
+
+```python
+# Example
+status = "ok" if 200 <= code < 300 else "error"
+
+age = 18
+adult = "You are an adult." if age >= 18 else "You are not yet an adult."
 ```
 
 ## Loops
