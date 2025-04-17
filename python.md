@@ -82,6 +82,18 @@ The version can then be checked.
 $ flask --version
 ```
 
+The application/project structure may look like this:
+
+```
+my-app/
+├── .venv/               ← virtual environment (auto-created)
+├── app.py               ← your actual Flask app
+├── templates/           ← HTML templates go here (if using)
+│   └── index.html
+├── static/              ← (optional) for CSS, JS, images
+└── requirements.txt     ← (optional) for tracking dependencies
+```
+
 ## Executing Python Code
 Create a `Python` file containing the source code with the file extension of `.py`. Once the file has been created, execute the code:
 
