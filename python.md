@@ -781,4 +781,4 @@ This can be tested using `Postman` or `cURL`. To list all todos:
 $ curl http://127.0.0.1:5000/todos
 ```
 
-This is intentionally minimal, only everything in memory, no database to store data. In production, you’d use something like `PostgreSQL` or `Redis` and deploy with `Docker`.
+This is intentionally minimal, only everything in memory, no database to store data. In production, you’d use something like `PostgreSQL` or `Redis` and deploy with `Docker`. `Flask` and `React` work great together — Flask can be your backend API, and React your frontend.
