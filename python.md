@@ -1,5 +1,6 @@
 # Python
 
++ [Introduction](#introduction)
 + [Check Python Version](#check-python-version)
 + [Virtual Environments](#virtual-environments)
 + [Executing Python Code](#executing-python-code)
@@ -28,6 +29,13 @@
 + [Projects](#projects)
     + [Get Data from an API](#get-data-from-an-api)
     + [Microservice](#microservice)
+ 
+## Introduction
+`Python` is a high-level, general-purpose programming language that's widely used for everything from web development to data science, automation, artificial intelligence, and more. It's known for being:
+
++ `Easy to read and write` – Python has a clean, English-like syntax, which makes it beginner-friendly.
++ `Versatile` – You can use it for small scripts or large applications.
++ `Popular` – It has a huge community and lots of libraries and frameworks (like Django for web apps, pandas for data analysis, and TensorFlow for machine learning).
 
 ## Check Python Version
 To check the version of `Python` installed, open the terminal:
