@@ -703,6 +703,12 @@ $ python3 app.py
 
 This will run a development server at `http://127.0.0.1:5000` which can be opened in a browser window/tab.
 
+In `Flask` we may see the use of `jsonify`. This is used to convert data structures, like lists or dictionaries, into JSON format. JSON is usually the standard way to send data in APIs.
+
+```python
+from flask import Flask, jsonify
+```
+
 ## Projects
 
 ### Get Data from an API
