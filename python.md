@@ -26,6 +26,7 @@
     + [Requirements](#requirements)
 + [Try/Catch](#try-catch)
 + [Flask](#flask)
+    + [Routes](#routes)
 + [Projects](#projects)
     + [Get Data from an API](#get-data-from-an-api)
     + [Microservice](#microservice)
@@ -707,6 +708,15 @@ In `Flask` we may see the use of `jsonify`. This is used to convert data structu
 
 ```python
 from flask import Flask, jsonify
+```
+
+### Routes
+Additional routes can be added to a project using Flask by using the `@app.route()` decorator with different URL paths.
+
+```python
+@app.route('/about')
+def about():
+    return "This is the About page." 
 ```
 
 ## Projects
