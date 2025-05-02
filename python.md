@@ -27,6 +27,8 @@
 + [Try/Catch](#try-catch)
 + [Flask](#flask)
     + [Routes](#routes)
++ [Django](#django)
+    + [Install](#install)
 + [Projects](#projects)
     + [Get Data from an API](#get-data-from-an-api)
     + [Microservice](#microservice)
@@ -718,6 +720,26 @@ Additional routes can be added to a project using Flask by using the `@app.route
 def about():
     return "This is the About page." 
 ```
+
+## Django
+Django is a high-level Python web framework that allows you to quickly build secure and maintainable websites. It’s free and open source, and was designed to help developers take applications from concept to completion as quickly as possible.
+
+### Install
+To install `Django`, we can use `pip`:
+
+```shell
+$ pip3 install django
+```
+
+To create a project:
+
+```shell
+$ django-admin startproject myproject
+$ cd myproject
+$ python manage.py runserver
+```
+
+Visit `http://127.0.0.1:8000/` in your browser. You should see the Django welcome page.
 
 ## Projects
 
