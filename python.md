@@ -701,6 +701,21 @@ Whenever we create a file in Python, several variables are automatically created
 
 These are known as `"Dunder"` (double underscore) variables. When Python code is run as a script, the variable of `__name__` will always be assigned the value of `'__main__'`. This is executed directly. Files can also be executed indirectly, as with modules. In this case, the `__name__` variable will be assigned the file's name e.g. `file_1` (`file_1.py`).
 
++ Using the statement lets you define code that should only run when the file is executed directly, not when it's imported.
++ It is used to determine whether a Python script is being run directly (as the main program) or being imported as a module in another script.
+
+Example:
+
+```python
+def greet():
+    print("Hello!")
+
+if __name__ == '__main__':
+    greet()  # This only runs if this file is run directly and not as a module
+```
+
+The code example above will call the `greet()` function if the script is run/executed directly. If used as a module, nothing happens automatically.
+
 ## Flask
 We are using `Flask` to create a simple route. This is in a file named `app.py`.
 
