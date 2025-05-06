@@ -25,6 +25,7 @@
 + [Import](#import)
     + [Requirements](#requirements)
 + [Try/Catch](#try-catch)
++ [Main](#main)
 + [Flask](#flask)
     + [Routes](#routes)
 + [Django](#django)
@@ -681,6 +682,24 @@ try:
 except SomeException as e:
     # Code that runs when an error/exception occurs
 ```
+
+## Main
+The following code is a statement:
+
+```python
+if __name__ == '__main__':
+    # Code here
+```
+
+`__name__` is a variable. This variable is not declared in our code. No error will be produced.
+
+Whenever we create a file in Python, several variables are automatically created, including:
+
++ `__name__`
++ `__file__`
++ `__doc__`
+
+These are known as `"Dunder"` (double underscore) variables. When Python code is run as a script, the variable of `__name__` will always be assigned the value of `'__main__'`. This is executed directly. Files can also be executed indirectly, as with modules. In this case, the `__name__` variable will be assigned the file's name e.g. `file_1` (`file_1.py`).
 
 ## Flask
 We are using `Flask` to create a simple route. This is in a file named `app.py`.
